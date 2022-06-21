@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { primaryBlue, secondaryBlue, secondaryColor } from "../../../constants/colors";
+import { primaryBlue, secondaryBlue, secondaryColor } from "../../../../constants/colors";
 
-// BACKGROUND PAGE----------------------------------------------------------------
+// 1. BACKGROUND PAGE----------------------------------------------------------------
 export const PageContent = styled.div`
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@ export const PageContent = styled.div`
     background-image: linear-gradient(to bottom, ${secondaryBlue} 15%, ${secondaryColor} 10%);
 `;
 
-// CHAT APP WINDOW----------------------------------------------------------------
+// 2. CHAT APP WINDOW----------------------------------------------------------------
 export const ChatApp = styled.div`
     display: flex;
     height: 90vh;
@@ -19,16 +19,16 @@ export const ChatApp = styled.div`
     background-color: #eceded;
 `;
 
-// CHAT APP WINDOW -> SIDEBAR----------------------------------------------------------------
+// 3. CHAT APP WINDOW -> SIDEBAR----------------------------------------------------------------
 export const Sidebar = styled.div`
     display: flex;
     flex-direction: column;
     width: 35%;
     max-width: 400px;
-    border-right: 1px solid green;
+    border-right: 1px solid #d1e0e0;
 `;
 
-// (SIDEBAR HEADER)
+// (3.1 SIDEBAR HEADER)
 export const SidebarHeader = styled.header`
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ export const SidebarHeaderButton = styled.button`
     cursor: pointer;
 `;
 
-// (SIDEBAR SEARCH)
+// (3.2 SIDEBAR SEARCH)
 export const SidebarSearch = styled.div`
     padding: 15px 15px;
     div{
@@ -80,5 +80,12 @@ export const SidebarSearch = styled.div`
         }
     }
 `;
-// CHAT APP WINDOW -> CONTENT----------------------------------------------------------------
+
+// (3.3 SIDEBAR CHAT LIST)
+export const SidebarChatList = styled.div`
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fff;
+`;
+// 4. CHAT APP WINDOW -> CONTENT----------------------------------------------------------------
 export const ContentApp = styled.div``;

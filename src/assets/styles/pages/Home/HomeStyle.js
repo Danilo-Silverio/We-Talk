@@ -86,6 +86,14 @@ export const SidebarChatList = styled.div`
     flex: 1;
     overflow-y: auto;
     background-color: #fff;
+    ::-webkit-scrollbar{
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background-color: ${primaryBlue};
+    }
 `;
 // 4. CHAT APP WINDOW -> CONTENT----------------------------------------------------------------
 export const ContentApp = styled.div``;

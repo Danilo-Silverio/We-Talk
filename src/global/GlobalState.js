@@ -3,7 +3,7 @@ import GlobalStateContext from "./GlobalStateContext";
 
 const GlobalState = (props) => {
     
-    const [ chatList, setChatList ] = useState([{}, {}, {}, {}])
+    const [ chatList, setChatList ] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
 
     const data = {chatList};
 

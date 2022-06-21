@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primaryBlue, secondaryBlue, secondaryColor } from "../../../../constants/colors";
+import { secondaryColor, tertiaryBlue } from "../../../../constants/colors";
 
 // 1. CHAT LIST MESSAGES----------------------------------------------------------------
 export const ChatListMessage = styled.div`
@@ -7,6 +7,7 @@ export const ChatListMessage = styled.div`
     align-items: center;
     height: 70px;
     cursor: pointer;
+    transition: all 0.3s;
     img{
         height: 50px;
         width: 50px;
@@ -14,7 +15,7 @@ export const ChatListMessage = styled.div`
         margin-left: 15px;
     }
     :hover{
-        background-color: ${secondaryColor};
+        background-color: ${tertiaryBlue};
     }
 `;
 
@@ -26,9 +27,12 @@ export const ChatListMessageContent = styled.div`
     flex: 1;
     padding-right: 15px;
     margin-left: 15px;
-    border-bottom: 1px solid #d1e0e0;
+    border-bottom: 1px solid ${secondaryColor};
     flex-wrap: wrap;
     min-width: 0;
+    :hover{
+        border: none;
+    }
 `;
 
 // (1.1 MESSAGE CONTENT)

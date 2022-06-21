@@ -1,7 +1,7 @@
 import React from "react";
 
 // (STYLED-COMPONENTS)
-import { ChatApp, ContentApp, PageContent, Sidebar, SidebarHeader, SidebarHeaderButton, SidebarHeaderButtons, SidebarSearch } from "../../assets/styles/Home/HomeStyle";
+import { ChatApp, ContentApp, PageContent, Sidebar, SidebarChatList, SidebarHeader, SidebarHeaderButton, SidebarHeaderButtons, SidebarSearch } from "../../assets/styles/pages/Home/HomeStyle";
 
 // (IMAGES)
 import AvatarIcon from "../../assets/images/avatar-icon.png";
@@ -12,7 +12,11 @@ import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SearchIcon from '@mui/icons-material/Search';
 
+//COMPONENTS
+import ChatListMessages from "../../components/ChatListMessages/ChatListMessages";
+
 const HomePage = () => {
+    
     return (
         <PageContent>
             <ChatApp>
@@ -37,7 +41,9 @@ const HomePage = () => {
                             <input type="search" placeholder="Pesquisar ou começar uma nova conversa" />
                         </div>
                     </SidebarSearch>
-                    <div>contatos</div>
+                    <SidebarChatList>
+                        <ChatListMessages/>
+                    </SidebarChatList>
                 </Sidebar>
                 <ContentApp>...</ContentApp>
             </ChatApp>

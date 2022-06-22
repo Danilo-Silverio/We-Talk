@@ -24,8 +24,9 @@ const GlobalState = (props) => {
         {chatId: Date.now(), person:"Lucas Vicent", profilePicture: `${AvatarIcon4}`}
     ]);
     const [ activeChat, setActiveChat ] = useState([{}]);
+    const [ emojiPickerDisplay, setEmojiPickerDisplay ] = useState(false);
 
-    const data = {chatList, activeChat, setChatList, setActiveChat };
+    const data = {chatList, activeChat, emojiPickerDisplay, setEmojiPickerDisplay, setChatList, setActiveChat };
 
     return (
         <GlobalStateContext.Provider value={data}>

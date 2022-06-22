@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainBlue, primaryBlue, secondaryBlue, secondaryColor, tertiaryBlue } from "../../../../constants/colors";
+import { primaryBlue, secondaryBlue, secondaryColor, tertiaryBlue } from "../../../../constants/colors";
 
 // 1. BACKGROUND PAGE----------------------------------------------------------------
 export const PageContent = styled.div`
@@ -35,8 +35,8 @@ export const SidebarHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    padding: 10px 15px 0 15px;
-    background-color: ${mainBlue};
+    padding: 6px 15px 6px 25px;
+    background-image: linear-gradient(to bottom, ${primaryBlue} 50%, ${secondaryBlue});
     img{
         height: 40px;
         width: 40px;

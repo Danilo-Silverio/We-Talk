@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext }from "react";
+import GlobalStateContext from "../../global/GlobalStateContext";
 
 // (STYLED-COMPONENTS)
 import { ChatApp, ContentApp, PageContent, Sidebar, SidebarChatList, SidebarHeader, SidebarHeaderButton, SidebarHeaderButtons, SidebarSearch } from "../../assets/styles/pages/Home/HomeStyle";
 
 // (IMAGES)
-import AvatarIcon from "../../assets/images/avatar-icon.png";
+import AvatarIcon3 from "../../assets/images/avatar-icon3.png";
 
 // (MATERIAL UI)
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
@@ -14,15 +15,21 @@ import SearchIcon from '@mui/icons-material/Search';
 
 //COMPONENTS
 import ChatListMessages from "../../components/ChatListMessages/ChatListMessages";
+import StartingChat from "../../components/StartingChat/StartingChat";
+import ChatWindow from "../../components/ChatWindow/ChatWindow";
+
 
 const HomePage = () => {
     
+    const {activeChat} = useContext(GlobalStateContext);
+
+
     return (
         <PageContent>
             <ChatApp>
                 <Sidebar>
                     <SidebarHeader>
-                        <img src={AvatarIcon} alt="Avatar Icon"/>
+                        <img src={AvatarIcon3} alt="Avatar Icon"/>
                         <SidebarHeaderButtons>
                             <SidebarHeaderButton>
                                 <DonutLargeIcon style={{color: "#f8fbff"}}/>
@@ -45,7 +52,10 @@ const HomePage = () => {
                         <ChatListMessages/>
                     </SidebarChatList>
                 </Sidebar>
-                <ContentApp>...</ContentApp>
+                <ContentApp> 
+                    { activeChat.chatId !== undefined && <ChatWindow/> }
+                    { activeChat.chatId === undefined && <StartingChat/> }
+                </ContentApp>
             </ChatApp>
         </PageContent>
     )

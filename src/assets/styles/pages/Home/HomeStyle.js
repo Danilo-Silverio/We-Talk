@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primaryBlue, secondaryBlue, secondaryColor } from "../../../../constants/colors";
+import { mainBlue, primaryBlue, secondaryBlue, secondaryColor, tertiaryBlue } from "../../../../constants/colors";
 
 // 1. BACKGROUND PAGE----------------------------------------------------------------
 export const PageContent = styled.div`
@@ -8,7 +8,7 @@ export const PageContent = styled.div`
     justify-content: center; 
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to bottom, ${secondaryBlue} 15%, ${secondaryColor} 10%);
+    background-image: linear-gradient(to bottom, ${secondaryBlue} 20%, ${secondaryColor} 10%);
 `;
 
 // 2. CHAT APP WINDOW----------------------------------------------------------------
@@ -17,6 +17,7 @@ export const ChatApp = styled.div`
     height: 90vh;
     width: 85vw;
     background-color: #eceded;
+    box-shadow: 10px 10px 50px rgba(96, 96, 99, 0.664);
 `;
 
 // 3. CHAT APP WINDOW -> SIDEBAR----------------------------------------------------------------
@@ -25,7 +26,7 @@ export const Sidebar = styled.div`
     flex-direction: column;
     width: 35%;
     max-width: 400px;
-    border-right: 1px solid #d1e0e0;
+    border-right: 2px solid ${tertiaryBlue};
 `;
 
 // (3.1 SIDEBAR HEADER)
@@ -35,7 +36,7 @@ export const SidebarHeader = styled.header`
     justify-content: space-between;
     height: 60px;
     padding: 10px 15px 0 15px;
-    background-color: ${primaryBlue};
+    background-color: ${mainBlue};
     img{
         height: 40px;
         width: 40px;
@@ -59,6 +60,10 @@ export const SidebarHeaderButton = styled.button`
     border-radius: 20px;
     background-color: transparent;
     cursor: pointer;
+    transition: all 0.3s ease;
+    :hover{
+        background-color: ${tertiaryBlue};
+    }
 `;
 
 // (3.2 SIDEBAR SEARCH)
@@ -96,4 +101,7 @@ export const SidebarChatList = styled.div`
     }
 `;
 // 4. CHAT APP WINDOW -> CONTENT----------------------------------------------------------------
-export const ContentApp = styled.div``;
+export const ContentApp = styled.div`
+    flex: 1;
+    background-image: linear-gradient( to bottom, ${tertiaryBlue} 10%, ${secondaryColor});
+`;

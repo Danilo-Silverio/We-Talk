@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { secondaryColor, tertiaryBlue } from "../../../../constants/colors";
+import { tertiaryBlue } from "../../../../constants/colors";
 
 // 1. CHAT LIST MESSAGES----------------------------------------------------------------
 export const ChatListMessage = styled.div`
     display: flex;
     align-items: center;
     height: 70px;
-    cursor: pointer;
+    cursor: pointer; 
     transition: all 0.3s;
+    background-color:  ${props => props.active ? `${tertiaryBlue}` : "#fff"};
     img{
         height: 50px;
         width: 50px;
@@ -27,7 +28,7 @@ export const ChatListMessageContent = styled.div`
     flex: 1;
     padding-right: 15px;
     margin-left: 15px;
-    border-bottom: 1px solid ${secondaryColor};
+    border-bottom: 1px solid rgba(143, 143, 145, 0.336);
     flex-wrap: wrap;
     min-width: 0;
     :hover{

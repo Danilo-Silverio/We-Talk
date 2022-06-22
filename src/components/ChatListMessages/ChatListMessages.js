@@ -4,22 +4,19 @@ import GlobalStateContext from "../../global/GlobalStateContext";
 //STYLED-COMPONENTS
 import { ChatListMessage, ChatListMessageContent, MessageContent, MessageContentDate, MessageContentLastMsg, MessageContentName } from "../../assets/styles/components/ChatListMessages/ChatListStyle";
 
-// (IMAGES)
-import AvatarIcon from "../../assets/images/avatar-icon.png";
-
-
 
 const ChatListMessages = () => {
     
-    const {chatList} = useContext(GlobalStateContext);
+    const {chatList, activeChat, setActiveChat} = useContext(GlobalStateContext);
 
     const chatBox = chatList.map((item, key) => {
+        
         return (
-            <ChatListMessage key={key}>
-                <img src={AvatarIcon} alt="Avatar Icon" />
+            <ChatListMessage key={key} onClick={() => setActiveChat(chatList[key])} active={activeChat === chatList[key]}>
+                <img src={item.profilePicture} alt="Avatar Icon" />
                 <ChatListMessageContent>
                     <MessageContent>
-                        <MessageContentName>Danilo Silvério</MessageContentName>
+                        <MessageContentName>{item.person}</MessageContentName>
                         <MessageContentDate>18:00</MessageContentDate>
                     </MessageContent>
                     <MessageContent>

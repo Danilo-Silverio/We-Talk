@@ -74,30 +74,27 @@ export const ChatWindowAreaFooter = styled.div`
     align-items: center;
     height: 65px;
     box-shadow: 0 -3px 15px #b4b7b4;
-    background-image: linear-gradient(to bottom, #b4b7b4 5%, #dddeda);
+    background-image: linear-gradient(to bottom, ${tertiaryBlue} 35%, ${secondaryColor});
+`;
+
+export const EmojiDisplay = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    cursor: pointer;
 `;
 
 export const CloseButton = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: none;
-    border-radius: 50px;
     background-color: transparent;
-    cursor: pointer;
-    overflow-x: hidden;
-    background-color: red;
 `;
 
 export const EmojiButton = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 25px;
-    padding: 5px;
+    padding: 4px;
     border: none;
-    border-radius: 50px;
-    background-color: red;
+    border-radius: 50%;
+    background-color: transparent;
     cursor: pointer;
 `;
 

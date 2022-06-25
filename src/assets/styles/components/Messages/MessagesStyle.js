@@ -1,21 +1,19 @@
 import styled from "styled-components";
-import { secondaryColor } from "../../../../constants/colors";
+
 
 
 // 1. MESSAGES----------------------------------------------------------------
-
 export const MessageBox = styled.div`
     display: flex;
-    width: 500px;
-    margin: 20px 0 0 10px;
-    background-color: red;
+    max-width: 80%;
 `;
 
 export const MessageContent = styled.div`
     display: flex;
+    width: fit-content;
     flex-direction: column;
-    width: 90%;
     padding: 10px;
+    margin: 20px 0 0 20px;
     border-radius: 10px;
     overflow-wrap: break-word;
     background-color: #fff;

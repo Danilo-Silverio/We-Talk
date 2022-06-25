@@ -63,9 +63,18 @@ export const ChatWindowHeaderButtons = styled.div`
 // (1.2 CHAT WINDOW AREA BODY)
 export const ChatWindowAreaBody = styled.div`
     flex: 1;
+    overflow-y: auto;
     background-color: ${secondaryColor};
     background-image: url(${Background});
     background-position: center;
+    ::-webkit-scrollbar{
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background-color: ${primaryBlue};
+    }
 `;
 
 // (1.3 CHAT WINDOW AREA FOOTER)

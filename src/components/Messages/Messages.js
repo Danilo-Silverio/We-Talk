@@ -7,20 +7,20 @@ import { MessageBox, MessageContent, MessageDate, MessageText } from "../../asse
 
 const Messages = () => {
     
-    const {chatMessage} = useContext(GlobalStateContext);
+    const {chatList, chatMessage, activeChat} = useContext(GlobalStateContext);
     
-    const chat = chatMessage.map((key, item) => {
-        return(
-            <MessageBox key={key}>
-                <MessageContent>
-                    <MessageText>ddddaaaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaddddaaaaaaaaaaasdasdsaaaaaaaaasdasdsa</MessageText>
-                    <MessageDate>19:00</MessageDate>
-                </MessageContent>
-            </MessageBox>
-        )
-    });
+    console.log(activeChat)
+    console.log(chatList)
+    console.log(chatMessage)
 
-    return chat
+    return(    
+        <MessageBox>            
+            <MessageContent>
+                <MessageText>{activeChat.lastMessage}</MessageText>
+                <MessageDate>19:00</MessageDate>
+            </MessageContent>
+        </MessageBox>
+    )
 };
 
 export default Messages;

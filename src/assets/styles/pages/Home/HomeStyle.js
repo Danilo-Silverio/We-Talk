@@ -102,6 +102,6 @@ export const SidebarChatList = styled.div`
 `;
 // 4. CHAT APP WINDOW -> CONTENT----------------------------------------------------------------
 export const ContentApp = styled.div`
-    flex: 1;
+    width: 75%;
     background-image: linear-gradient( to bottom, ${tertiaryBlue} 10%, ${secondaryColor});
 `;

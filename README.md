@@ -2,7 +2,7 @@
 
 Um projeto em desenvolvimento que simula um aplicativo de bate-papo.
 
-Venha conhecer o <a href="https://wetalk.surge.sh/" target="_blank">We Talk.</a>
+Venha conhecer o <a href="https://we-talk.surge.sh/" target="_blank">We Talk.</a>
 
 # Projeto
 

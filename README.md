@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# We Talk - Aplicativo de Bate-Papo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um projeto em desenvolvimento que simula um aplicativo de bate-papo.
 
-## Available Scripts
+Venha conhecer o <a href="https://wetalk.surge.sh/" target="_blank">We Talk.</a>
 
-In the project directory, you can run:
+# Projeto
 
-### `npm start`
+## 📚 Tecnologias & Bibliotecas utilizadas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - Reactjs
+    - Styled-Components
+    - CSS
+    - Global State
+    - useState 
+    - Router
+    - Material UI
+    - Componentização & Estrutura de Pastas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## ✅ Desafios do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Funcionais`
 
-### `npm run build`
+* O usuário deve conseguir enviar mensagens para o WeBot.
+* O usuário deve conseguir enviar emojis através da biblioteca EmojiPicker.
+* Fazer o uso de GlobalState.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Não funcionais`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* O design deve ser inspirado no WhatsApp Web.
+* O app não precosa ser responsivo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Como faço rodar projeto?
 
-### `npm run eject`
+### `git clone`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone o link https do projeto no GitHub para seu repositório local através do terminal utilizando o comando `git clone link do projeto`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Após ter o repósitorio clonado em seu computador utilize o comando `npm install` para instalar todas suas dependências.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `npm run start`
 
-## Learn More
+O comando `npm run start` serve para iniciar o projeto e verificar como ele renderiza em seu computador.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Interface & Design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div>
+   <img align="center"  height="400" width="800" src="https://user-images.githubusercontent.com/94642853/176223160-357e473b-26f6-40bb-a57a-c6ba714df32d.png"/>
+   <img align="center"  height="400" width="800" src="https://user-images.githubusercontent.com/94642853/176223400-f239c6a2-cdf3-4e77-af12-b336696a64f3.png"/>
+   <img align="center"  height="400" width="800" src="https://user-images.githubusercontent.com/94642853/176224087-3c55f2b6-6653-4843-a3d5-f4d68fbaf5cf.png"/>
+   <img align="center"  height="400" width="800" src="https://user-images.githubusercontent.com/94642853/176224418-74f7da56-10b7-4b18-a34b-7077bce2ffd3.png"/>
+</div>
 
-### Code Splitting
+## Mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div>
+   <img align="center"  height="550" width="350" src="https://user-images.githubusercontent.com/94642853/176225502-c8ec1dc5-bcc0-46d9-bac1-a5f6df1a2c9e.png"/>
+</div>

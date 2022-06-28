@@ -29,7 +29,7 @@ const HomePage = () => {
         <PageContent>
             <MobileWarning>
                 <img src={WetalkIcon} alt="We Talk Icon" />
-                <h1>Ops, essa aplicação é somente para computadore, tente mais tarde!</h1>
+                <h1>Ops, essa aplicação é somente para computadores, tente mais tarde!</h1>
             </MobileWarning>
             <ChatApp>
                 <Sidebar>

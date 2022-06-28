@@ -7,11 +7,7 @@ import { MessageBox, MessageContent, MessageDate, MessageText } from "../../asse
 
 const Messages = () => {
     
-    const {chatList, chatMessage, activeChat} = useContext(GlobalStateContext);
-    
-    console.log(activeChat)
-    console.log(chatList)
-    console.log(chatMessage)
+    const {activeChat} = useContext(GlobalStateContext);
 
     return(    
         <MessageBox>            

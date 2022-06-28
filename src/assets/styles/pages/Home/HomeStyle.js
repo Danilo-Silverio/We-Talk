@@ -1,5 +1,29 @@
 import styled from "styled-components";
-import { primaryBlue, secondaryBlue, secondaryColor, tertiaryBlue } from "../../../../constants/colors";
+import { mainBlue, primaryBlue, secondaryBlue, secondaryColor, tertiaryBlue } from "../../../../constants/colors";
+
+// 0. MOBILE WARNING----------------------------------------------------------------
+export const MobileWarning = styled.div`
+    display: none;
+    @media screen and (max-width: 750px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 80%;
+        font-weight: 700;
+        position: absolute;
+        min-height: 100vh;
+        min-width: 100vw;
+        color: ${secondaryColor};
+        background-image: linear-gradient(to bottom, ${mainBlue} 50%, ${primaryBlue});
+        z-index: 1000;
+        img{
+            height: 10%;
+            border-radius: 50%;
+        }
+    }
+`;  
 
 // 1. BACKGROUND PAGE----------------------------------------------------------------
 export const PageContent = styled.div`

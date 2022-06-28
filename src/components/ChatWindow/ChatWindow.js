@@ -16,11 +16,15 @@ import {
   SendMessageButton,
   InputArea,
   EmojiDisplay,
+  MessageBox,
+  MessageContent,
+  MessageText,
+  MessageDate
 } from "../../assets/styles/components/ChatWindow/ChatWindowStyle";
 import "../../assets/styles/components/ChatWindow/emoji.css";
 
 // (IMAGES)
-import Avatar from "../../assets/images/avatar-icon.png";
+
 
 // (MATERIAL UI)
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -35,10 +39,13 @@ import Messages from "../Messages/Messages";
 
 const ChatWindow = () => {
   const {
+    activeChat,
     emojiPickerDisplay,
     setEmojiPickerDisplay,
     textMessage,
     setTextMessage,
+    chatMessage,
+    setChatMessage
   } = useContext(GlobalStateContext);
 
   const handleEmojiClick = (e, emojiObject) => {
@@ -49,12 +56,34 @@ const ChatWindow = () => {
     setTextMessage(e.target.value);
   };
 
+  const newMessage = () => {
+
+    const insertMessage = [...chatMessage, textMessage]
+
+    setChatMessage(insertMessage);
+    setTextMessage("");
+  };
+
+  const displayMessage = chatMessage.map((item) => {
+
+    return(
+        <MessageBox>            
+            <MessageContent key={activeChat.chatId}>
+                <MessageText>{item}</MessageText>
+                <MessageDate>19:00</MessageDate>
+            </MessageContent>
+        </MessageBox>
+    )
+  });
+
+  console.log(activeChat)
+
   return (
     <ChatWindowArea>
       <ChatWindowAreaHeader>
         <ChatWindowHeaderInfo>
-          <img src={Avatar} alt="Avatar Icon" />
-          <h1>Nome</h1>
+          <img src={activeChat.profilePicture} alt="Avatar Icon" />
+          <h1>{activeChat.person}</h1>
         </ChatWindowHeaderInfo>
         <ChatWindowHeaderButtons>
           <button>
@@ -70,6 +99,7 @@ const ChatWindow = () => {
       </ChatWindowAreaHeader>
       <ChatWindowAreaBody>
         <Messages/>
+        {displayMessage}
       </ChatWindowAreaBody>
       <EmojiArea style={{ height: emojiPickerDisplay ? "280px" : "0px" }}>
         <EmojiPicker disableSearchBar onEmojiClick={handleEmojiClick} />
@@ -100,12 +130,12 @@ const ChatWindow = () => {
         <InputArea>
           <input
             type="text"
-            placeholder="Escreva uma mensagem"
+            placeholder="Digite uma mensagem"
             value={textMessage}
             onChange={onChangeText}
           />
         </InputArea>
-        <SendMessageButton>
+        <SendMessageButton onClick={newMessage}>
           <SendIcon fontSize="large" style={{ color: "#5e7aff" }} />
         </SendMessageButton>
       </ChatWindowAreaFooter>

@@ -2,10 +2,11 @@ import React, { useContext }from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
 
 // (STYLED-COMPONENTS)
-import { ChatApp, ContentApp, PageContent, Sidebar, SidebarChatList, SidebarHeader, SidebarHeaderButton, SidebarHeaderButtons, SidebarSearch } from "../../assets/styles/pages/Home/HomeStyle";
+import { ChatApp, ContentApp, MobileWarning, PageContent, Sidebar, SidebarChatList, SidebarHeader, SidebarHeaderButton, SidebarHeaderButtons, SidebarSearch } from "../../assets/styles/pages/Home/HomeStyle";
 
 // (IMAGES)
-import AvatarIcon3 from "../../assets/images/avatar-icon3.png";
+import AvatarIcon from "../../assets/images/avatar-icon.png";
+import WetalkIcon from "../../assets/images/wetalk-icon.png";
 
 // (MATERIAL UI)
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
@@ -26,10 +27,14 @@ const HomePage = () => {
 
     return (
         <PageContent>
+            <MobileWarning>
+                <img src={WetalkIcon} alt="We Talk Icon" />
+                <h1>Ops, essa aplicação é somente para computadore, tente mais tarde!</h1>
+            </MobileWarning>
             <ChatApp>
                 <Sidebar>
                     <SidebarHeader>
-                        <img src={AvatarIcon3} alt="Avatar Icon"/>
+                        <img src={AvatarIcon} alt="Avatar Icon"/>
                         <SidebarHeaderButtons>
                             <SidebarHeaderButton>
                                 <DonutLargeIcon style={{color: "#f8fbff"}}/>

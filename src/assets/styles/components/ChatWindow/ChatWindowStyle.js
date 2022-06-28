@@ -29,7 +29,7 @@ export const ChatWindowHeaderInfo = styled.div`
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        margin:0 20px 0 25px;
+        margin:0 10px 0 25px;
     }
     h1{
         font-size: 18px;
@@ -141,4 +141,38 @@ export const SendMessageButton = styled.button`
 export const EmojiArea = styled.div`
     overflow-y: hidden;
     transition: all 0.3s ease;
+`;
+
+// 1.5 (MESSAGES)----------------------------------------------------------------
+export const MessageBox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 100%;
+    margin: 0 40px 0 80px;
+    overflow-wrap: break-word;
+`;
+
+export const MessageContent = styled.div`
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    background-color: ${tertiaryBlue};
+`;
+
+export const MessageText = styled.p`
+   font-size: 14px;
+   margin: 5px 40px 5px 5px;
+`;
+
+export const MessageDate = styled.p`
+    height: 15px;
+    text-align: right;
+    font-size: 11px;
+    margin: 0 5px 0 0;
+    color: #999;
 `;

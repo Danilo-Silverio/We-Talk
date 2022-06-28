@@ -10,7 +10,7 @@ export const MobileWarning = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 80%;
+        font-size: 10px;
         font-weight: 700;
         position: absolute;
         min-height: 100vh;
@@ -19,7 +19,7 @@ export const MobileWarning = styled.div`
         background-image: linear-gradient(to bottom, ${mainBlue} 50%, ${primaryBlue});
         z-index: 1000;
         img{
-            height: 10%;
+            height: 100px;
             border-radius: 50%;
         }
     }

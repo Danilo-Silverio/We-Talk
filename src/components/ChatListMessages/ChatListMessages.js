@@ -21,7 +21,7 @@ const ChatListMessages = () => {
                     </MessageContent>
                     <MessageContent>
                         <MessageContentLastMsg>
-                            <p>Olá, tudo bem?</p>
+                            <p>{item.lastMessage}</p>
                         </MessageContentLastMsg>
                     </MessageContent>
                 </ChatListMessageContent>
